@@ -238,7 +238,7 @@ const Hero = ({ darkMode }) => {
 
                 {/* Gradient Overlay */}
                 <div
-                  className={`absolute inset-0 bg-linear-to-t ${
+                  className={`absolute inset-0 bg-gradient-to-t ${
                     darkMode
                       ? 'from-gray-900/50 to-transparent'
                       : 'from-white/20 to-transparent'
@@ -250,8 +250,8 @@ const Hero = ({ darkMode }) => {
               <motion.div
                 className={`absolute -top-4 -right-4 w-24 h-24 rounded-full ${
                   darkMode
-                    ? 'bg-linear-to-br from-orange-500/20 to-amber-500/10'
-                    : 'bg-linear-to-br from-orange-300/30 to-amber-300/20'
+                    ? 'bg-gradient-to-br from-orange-500/20 to-amber-500/10'
+                    : 'bg-gradient-to-br from-orange-300/30 to-amber-300/20'
                 } border-2 ${darkMode ? 'border-orange-500/30' : 'border-orange-400/30'} backdrop-blur-sm`}
                 animate={{
                   y: [0, -10, 0],
@@ -271,8 +271,8 @@ const Hero = ({ darkMode }) => {
               <motion.div
                 className={`absolute -bottom-6 -left-6 w-20 h-20 rounded-full ${
                   darkMode
-                    ? 'bg-linear-to-br from-blue-500/20 to-cyan-500/10'
-                    : 'bg-linear-to-br from-blue-300/30 to-cyan-300/20'
+                    ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/10'
+                    : 'bg-gradient-to-br from-blue-300/30 to-cyan-300/20'
                 } border-2 ${darkMode ? 'border-blue-500/30' : 'border-blue-400/30'} backdrop-blur-sm`}
                 animate={{
                   y: [0, 10, 0],

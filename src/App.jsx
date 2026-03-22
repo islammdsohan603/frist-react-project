@@ -5,6 +5,11 @@ import 'aos/dist/aos.css';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects'; // নতুন যোগ করুন
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -12,8 +17,9 @@ function App() {
   useEffect(() => {
     Aos.init({
       duration: 1000,
-      once: true,
+      once: false,
       offset: 100,
+      mirror: true,
     });
 
     document.documentElement.classList.add('dark');
@@ -38,12 +44,17 @@ function App() {
     <div
       className={
         darkMode
-          ? 'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
-          : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'
+          ? 'bg-gradient-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
+          : 'bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen'
       }
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Skills darkMode={darkMode} />
+      <Projects darkMode={darkMode} /> {/* নতুন যোগ করুন */}
+      <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </div>
   );
 }
